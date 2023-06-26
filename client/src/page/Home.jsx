@@ -23,12 +23,15 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/post", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://dall-e-v2-r2dg.onrender.com/api/v1/post",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();
@@ -67,7 +70,7 @@ const Home = () => {
     <section className='max-w-7xl mx-auto bg-[#e6ebf4]'>
       <div>
         <h1 className='font-mono font-medium text-black text-[30px]'>
-        Our Community&apos;s Contributions 
+          Our Community&apos;s Contributions
         </h1>
       </div>
 
