@@ -26,7 +26,7 @@ const Community = () => {
 
     try {
       const response = await fetch(
-        "https://dall-e-v2-r2dg.onrender.com/api/v1/post",
+        "https://dall-e-v2-rotz.onrender.com/api/v1/post",
         {
           method: "GET",
           headers: {
