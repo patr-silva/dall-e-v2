@@ -12,10 +12,11 @@ const FormField = ({
 }) => {
   return (
     <div>
-      <div className='flex items-center gap-2mb-2'>
+   
+      <div className='flex items-center gap-2'>
         <label
           htmlFor={name}
-          className='font-mono block mb-3 text-lg font-medium text-[#605f5f]'
+          className='font-mono block mb-3 text-lg font-medium text-white'
         >
           {labelName}
         </label>
@@ -23,7 +24,7 @@ const FormField = ({
           <button
             type='button'
             onClick={handleSurpriseMe}
-            className='font-semibold text-xs text-white bg-[#68ACA3] py-1 px-2 ml-5 mb-2 rounded-[5px]'
+            className='font-mono text-xs text-white border border-white py-1 px-2 ml-5 mb-2 rounded-md'
           >
             Surprise me
           </button>
@@ -37,7 +38,7 @@ const FormField = ({
         value={value}
         onChange={handleChange}
         required
-        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6469ff] focus:border-[#6469ff] outline-none block w-full p-3'
+        className='bg-gray-700 focus:border focus:border-white text-white rounded-md text-sm outline-none block w-96 p-2'
       />
     </div>
   );

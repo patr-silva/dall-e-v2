@@ -79,13 +79,12 @@ const CreatePost = () => {
   };
 
   return (
-    <section className='max-w-7xl mx-auto'>
-      <div>
-        <h1 className='font-mono font-medium text-black text-[30px]'>Create</h1>
+    <section className='max-w-7xl ml-8'>
+       <div>
+        <h1 className='font-mono font-medium text-white text-3xl mb-5'>Create</h1>
       </div>
-
-      <form className='mt-10 max-w-3xl' onSubmit={handleSubmit}>
-        <div className='flex flex-col gap-5'>
+      <form className='max-w-3xl' onSubmit={handleSubmit}>
+        <div className='flex flex-col gap-6'>
           <FormField
             labelName='Your name'
             type='text'
@@ -105,7 +104,7 @@ const CreatePost = () => {
             handleSurpriseMe={handleSurpriseMe}
           />
 
-          <div className='relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center'>
+          <div className='relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-white focus:border-white w-44 p-3 h-44 flex justify-center items-center'>
             {form.photo ? (
               <img
                 src={form.photo}
@@ -132,20 +131,13 @@ const CreatePost = () => {
           <button
             type='button'
             onClick={generateImage}
-            className='font-mono text-white bg-[#68ACA3] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'
+            className='font-mono text-white border border-white font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'
           >
             {generatingImg ? "Generating..." : "Generate"}
           </button>
-        </div>
-
-        <div className='mt-10'>
-          <p className='mt-2 text-[#808080] text-[14px]'>
-            ** Once you have created the image you want, you can share it with
-            others in the community **
-          </p>
           <button
             type='submit'
-            className='font-mono mt-3 text-white bg-[#1352ac] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'
+            className='font-mono text-white border border-white font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'
           >
             {loading ? "Sharing..." : "Share with the Community"}
           </button>

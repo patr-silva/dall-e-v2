@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Inter", sans-serif;
-  
+body {
+  background-color:rgb(69,77,90);
+  background-image: radial-gradient(
+    at center bottom,
+    rgb(253, 230, 138),
+    rgb(75, 85, 99),
+    rgb(17, 24, 39),
+    rgb(75, 85, 99)
+  );
+  font-family: "Montserrat", sans-serif;
 }
-
 @media screen and (min-width: 480px) {
   .card:nth-child(7n + 1) {
     grid-column: auto/span 2;
