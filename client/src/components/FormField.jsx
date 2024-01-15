@@ -9,10 +9,10 @@ const FormField = ({
   handleChange,
   isSurpriseMe,
   handleSurpriseMe,
+  textArea,
 }) => {
   return (
     <div>
-   
       <div className='flex items-center gap-2'>
         <label
           htmlFor={name}
@@ -29,17 +29,31 @@ const FormField = ({
             Surprise me
           </button>
         )}
-      </div>
-      <input
-        type={type}
-        id={name}
-        name={name}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-        required
-        className='bg-gray-700 focus:border focus:border-white text-white rounded-md text-sm outline-none block w-96 p-2'
-      />
+      </div>{" "}
+      {textArea && (
+        <textarea
+          type={type}
+          id={name}
+          name={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+          required
+          className='bg-gray-700 focus:border focus:border-white text-white rounded-md text-sm outline-none block w-96 p-2'
+        />
+      )}
+      {!textArea && (
+        <input
+          type={type}
+          id={name}
+          name={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+          required
+          className='bg-gray-700 focus:border focus:border-white text-white rounded-md text-sm outline-none block w-96 p-2'
+        />
+      )}
     </div>
   );
 };
@@ -53,6 +67,7 @@ FormField.propTypes = {
   handleChange: PropTypes.func,
   isSurpriseMe: PropTypes.bool,
   handleSurpriseMe: PropTypes.func,
+  textArea: PropTypes.bool,
 };
 
 export default FormField;

@@ -79,14 +79,11 @@ const CreatePost = () => {
   };
 
   return (
-    <section className='max-w-7xl ml-8'>
-       <div>
-        <h1 className='font-mono font-medium text-white text-3xl mb-5'>Create</h1>
-      </div>
+    <section className='max-w-7xl flex justify-center items-center mt-10'>
       <form className='max-w-3xl' onSubmit={handleSubmit}>
         <div className='flex flex-col gap-6'>
           <FormField
-            labelName='Your name'
+            labelName='Name'
             type='text'
             name='name'
             placeholder='John Doe'
@@ -102,6 +99,7 @@ const CreatePost = () => {
             handleChange={handleChange}
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
+            textArea
           />
 
           <div className='relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-white focus:border-white w-44 p-3 h-44 flex justify-center items-center'>
